@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Roll the dice</title>
+  </head>
+  <body>
+    <main>
+      <section class="game game-detail">
+        <button class="btn btn--start" id="start-btn">🎲 Start game</button>
+        <div class="points">
+          <p class="points-label">Target</p>
+          <p class="points-score" id="target">16</p>
+        </div>
+        <div class="points">
+          <p class="points-label">Points to win</p>
+          <p class="points-score" id="points">16</p>
+        </div>
+        <div class="points">
+          <p class="points-label">Attempts</p>
+          <p class="points-score" id="attempts">3</p>
+        </div>
+      </section>
+      <section class="game">
+        <img
+          src="dice.png"
+          alt="Playing dice"
+          class="dice"
+          style="width: 200px"
+        />
+        <button class="btn btn--roll">🎲 Roll dice</button>
+      </section>
+    </main>
+    <div class="modal modal-win hidden">
+      <h1 class="modal-finish">Congratulations 😍</h1>
+      <p class="modal-finish msg">You won the game 🎉🎉</p>
+      <div class="mbtn-section">
+        <button class="mbtn btn--new">🎲 New game</button>
+        <button class="mbtn btn--exit">Exit the game</button>
+      </div>
+    </div>
+
+    <div class="modal modal-lost hidden">
+      <h1 class="modal-finish">Sorry 🙁</h1>
+      <p class="modal-finish msg">You lost the game</p>
+      <div class="mbtn-section">
+        <button class="mbtn btn--again">Try again</button>
+        <button class="mbtn btn--exit" id="exitLost">Exit the game</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
